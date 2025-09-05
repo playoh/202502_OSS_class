@@ -1,0 +1,70 @@
+body {
+  background-color: black;
+  color: #84c754;
+  font: 100%/1.5 "Courier New", Courier, monospace, "Malgun Gothic", "Noto Sans KR";
+}
+
+h1 {
+  margin: 0;
+}
+
+.top p{
+  margin: 0;
+}
+.nav_Btn ul{
+  margin: 0;
+  padding: 2%;
+}
+
+.nav_Btn ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.nav_Btn ul li:nth-child(4) {
+  color: white;
+  font-weight: bold;
+}
+
+.small_sideBar {
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 0 1%;
+  margin: 0;
+
+  width: 320px;
+  top: 0;
+  right: 0;
+  margin-top: 5%;
+  margin-right: 2%;
+  position: absolute;
+  font-size: 80%;
+  line-height: 20px;
+}
+.content p{
+  margin-bottom: 3px;
+}
+a {
+  color: white;
+}
+
+a:hover {
+  color: #84c754;
+  cursor: pointer;
+}
+
+.total_page {
+  margin: 2%;
+}
+
+.footer {
+  font-size: 70%;
+  font-weight: 300;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+}
