@@ -1,14 +1,40 @@
-body h1{
-  color: #04AA6D;
+body {
+  font: 100%/1.5 Verdana, "Malgun Gothic", "Noto Sans KR", Apple SD Gothic Neo, Arial, Helvetica, sans-serif;
 }
 
-.Nav_Btn li{
-  padding: 0 3%;
+body h1{
+  color: #4caf50;
+}
+
+body h2{
+  color: #4caf50;
+}
+
+.total_Page{
+  margin: 1%;
+}
+
+.Nav_Btn ul{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav_Btn ul li{
+  padding: 0.3% 2%;
+  font-weight: bold;
+  list-style: none;
   background-color: #555555;
   color: white;
 }
 .Nav_Btn ul li:nth-child(3) {
-  background-color: #04AA6D;
+  background-color: #4caf50;
+}
+.Nav_Btn ul li:hover{
+  background-color: black;
+  cursor: pointer;
 }
 
 
@@ -20,4 +46,17 @@ body h1{
 }
 .Bar_container h3{
   color: #04AA6D;
+}
+
+.footer{
+  font-size: 70%;
+  font-weight: 300;
+  padding: 10px;
+  text-align: center;
+  line-height: 14px;
+}
+
+a:hover{
+  color: #4caf50;
+  cursor: pointer;
 }
