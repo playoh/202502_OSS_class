@@ -1,0 +1,23 @@
+body h1{
+  color: #04AA6D;
+}
+
+.Nav_Btn li{
+  padding: 0 3%;
+  background-color: #555555;
+  color: white;
+}
+.Nav_Btn ul li:nth-child(3) {
+  background-color: #04AA6D;
+}
+
+
+
+.Bar_container{
+  background-color: #F1F1F1;
+  border: 1px solid #d4d4d4;
+  padding: 0 10px;
+}
+.Bar_container h3{
+  color: #04AA6D;
+}
