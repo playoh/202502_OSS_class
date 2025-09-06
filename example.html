@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cover</title>
+  <style>
+    :root {
+      --bg: #212529;
+      --text: #fff;
+      --muted: #adb5bd;
+      --hover: #6c757d;
+      --btn-bg: #fff;
+      --btn-text: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: var(--muted);
+      margin-left: 1.25rem;
+      text-decoration: none;
+      font-weight: 500;
+
+    }
+
+    nav a.active {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 2px;
+    }
+
+    nav a:hover {
+      color: var(--hover);
+      padding-bottom: 2px;
+      border-bottom: 2px solid var(--hover);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    main h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      max-width: 600px;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background-color: #e9ecef;
+    }
+
+    footer {
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">Cover</div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Cover your page.</h1>
+    <p>
+      Cover is a one-page template for building simple and beautiful home
+      pages. Download, edit the text, and add your own fullscreen
+      background photo to make it your own.
+    </p>
+    <button class="btn">Learn more</button>
+  </main>
+
+  <footer>
+    Cover template for <a href="#">Bootstrap</a>, by <a href="#">@mdo</a>.
+  </footer>
+</body>
+
+</html>
