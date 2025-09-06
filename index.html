@@ -1,11 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YEONJU STUDIO | Online Clothing Store</title>
+  <style>
+    :root { --primary:#04AA6D; --bg:#FFFDF5; --text:#222; --muted:#6b7280; --radius:12px }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:100%/1.6 "Noto Sans KR","Malgun Gothic",system-ui,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:20px}
+
+    header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #eee}
+    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:12px 20px}
+    .brand{font-weight:800;letter-spacing:.5px}
+    .menu{display:flex;gap:16px;flex-wrap:wrap;font-weight:600}
+    .menu a{padding:8px 10px;border-radius:8px}
+    .menu a:hover{background:#f3f4f6}
+
+    .hero{border-radius:var(--radius);overflow:hidden;position:relative}
+    .hero img{width:100%;height:420px;object-fit:cover}
+    .hero .overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.2))}
+    .hero .copy{position:absolute;left:24px;bottom:24px;color:#fff;max-width:560px}
+    .hero h1{margin:0 0 8px;font-size:clamp(24px,4vw,42px);line-height:1.2}
+    .cta{display:inline-block;background:var(--primary);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;margin-top:10px}
+    .cta:hover{opacity:.9}
+
+    .section{margin-top:28px}
+    .section h2{margin:0 0 12px;font-size:20px}
+
+    .grid-cat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid #eee}
+    .card .body{padding:12px}
+    .tag{display:inline-block;padding:4px 10px;background:#eef6f3;border-radius:999px;color:#085b3f;font-size:12px;font-weight:700}
+
+    .grid-prod{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .prod{border-radius:var(--radius);overflow:hidden;border:1px solid #eee;background:#fff}
+    .prod .img-wrap{aspect-ratio:1/1;background:#fafafa}
+    .prod .meta{padding:10px}
+    .prod .title{font-weight:700;margin:0 0 4px}
+    .price{font-weight:800}
+    .price .compare{color:var(--muted);text-decoration:line-through;font-weight:500;margin-left:6px}
+    .prod:hover{box-shadow:0 8px 24px rgba(0,0,0,.06);transform:translateY(-1px)}
+
+    .promo{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border:1px dashed var(--primary);background:#f7fffb;border-radius:var(--radius);padding:16px}
+    .input{display:flex;gap:8px}
+    .input input{padding:10px 12px;border:1px solid #ddd;border-radius:10px;min-width:240px}
+    .input button{padding:10px 14px;border:0;background:var(--primary);color:#fff;border-radius:10px;font-weight:800}
+
+    footer{margin:28px 0 18px;color:var(--muted);font-size:14px}
+    .credits{font-size:12px;color:#9ca3af}
+
+    @media (max-width:1024px){ .grid-prod{grid-template-columns:repeat(3,1fr)} }
+    @media (max-width:720px){
+      .grid-cat{grid-template-columns:1fr 1fr}
+      .grid-prod{grid-template-columns:1fr 1fr}
+      .hero img{height:320px}
+      .input{width:100%}
+      .input input{flex:1}
+    }
+  </style>
 </head>
 <body>
-  
+  <header>
+    <div class="nav container">
+      <div class="brand">YEONJU STUDIO</div>
+      <nav class="menu">
+        <a href="#new">신상품</a><a href="#men">남성</a><a href="#women">여성</a><a href="#sale">세일</a><a href="#about">브랜드</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO (의류 매장/의류 랙) -->
+    <section class="hero" aria-label="Seasonal Campaign">
+      <img src="https://images.pexels.com/photos/14585221/pexels-photo-14585221.jpeg?auto=compress&cs=tinysrgb&w=1600&h=420&fit=crop" alt="의류 매장 전경 배너" />
+      <div class="overlay" aria-hidden="true"></div>
+      <div class="copy">
+        <h1>2025 F/W NEW ARRIVAL</h1>
+        <p>데일리 미니멀 워드롭 · 오늘 출근룩 완성</p>
+        <a class="cta" href="#new">지금 쇼핑하기</a>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" id="women" aria-label="카테고리">
+      <h2>카테고리</h2>
+      <div class="grid-cat">
+        <!-- WOMEN -->
+        <a class="card" href="#women">
+          <img src="https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="여성 의류 컬렉션" />
+          <div class="body"><span class="tag">WOMEN</span></div>
+        </a>
+        <!-- MEN -->
+        <a class="card" href="#men">
+          <img src="https://images.pexels.com/photos/29210804/pexels-photo-29210804.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="남성 의류 컬렉션" />
+          <div class="body"><span class="tag">MEN</span></div>
+        </a>
+        <!-- SALE (데님/행거 등 의류 비주얼) -->
+        <a class="card" href="#sale">
+          <img src="https://images.pexels.com/photos/17720474/pexels-photo-17720474.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="세일 카테고리 (데님)" />
+          <div class="body"><span class="tag">SALE</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- NEW / BEST -->
+    <section class="section" id="new" aria-label="신상품">
+      <h2>신상품 & 베스트</h2>
+      <div class="grid-prod">
+        <!-- 데님 팬츠 -->
+        <a class="prod" href="#">
+          <div class="img-wrap">
+            <img src="https://images.pexels.com/photos/24513278/pexels-photo-24513278.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop" alt="스탠다드 데님 팬츠" />
+          </div>
+          <div class="meta">
+            <p class="title">스탠다드 데님 팬츠</p>
+            <p class="price">₩59,000 <span class="compare">₩69,000</span></p>
+          </div>
+        </a>
+        <!-- 화이트 티셔츠 -->
+        <a class="prod" href="#">
+          <div class="img-wrap">
+            <img src="https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop" alt="화이트 크루넥 티셔츠" />
+          </div>
+          <div class="meta">
+            <p class="title">화이트 크루넥 티셔츠</p>
+            <p class="price">₩19,000</p>
+          </div>
+        </a>
+        <!-- 라이트 자켓 -->
+        <a class="prod" href="#">
+          <div class="img-wrap">
+            <img src="https://images.pexels.com/photos/6765179/pexels-photo-6765179.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop" alt="라이트 자켓" />
+          </div>
+          <div class="meta">
+            <p class="title">라이트 자켓</p>
+            <p class="price">₩79,000 <span class="compare">₩89,000</span></p>
+          </div>
+        </a>
+        <!-- 캔버스 백 -->
+        <a class="prod" href="#">
+          <div class="img-wrap">
+            <img src="https://images.pexels.com/photos/6787035/pexels-photo-6787035.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop" alt="데일리 캔버스 백" />
+          </div>
+          <div class="meta">
+            <p class="title">데일리 캔버스 백</p>
+            <p class="price">₩29,000</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- PROMO / NEWSLETTER -->
+    <section class="section promo" aria-label="프로모션 및 구독">
+      <div><strong>첫 구매 10% 쿠폰</strong><br />구독하면 신상품과 세일 소식을 가장 먼저 받아보세요.</div>
+      <form class="input" action="#" method="post">
+        <input type="email" name="email" placeholder="이메일 주소" required />
+        <button type="submit">구독하기</button>
+      </form>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-label="브랜드 소개">
+      <h2>브랜드 스토리</h2>
+      <p style="color:var(--muted);margin:6px 0 0">
+        YEONJU STUDIO는 “덜어낸 미니멀, 오래 입는 베이식”을 지향합니다. 매일 입는 옷의 품질과 핏을 가장 먼저 생각합니다.
+      </p>
+    </section>
+
+    <footer>
+      <div class="credits">이 페이지는 데모로, 실제 결제 기능은 포함하지 않습니다.</div>
+      <div style="margin-top:8px">© 2025 YEONJU STUDIO · 사업자정보/약관/개인정보처리방침(데모)</div>
+    </footer>
+  </main>
 </body>
 </html>
