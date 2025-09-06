@@ -15,7 +15,12 @@ h1 {
   margin: 0;
   padding: 2%;
 }
-
+.nav_Btn ul li a{
+  text-decoration: none;
+}
+.nav_Btn ul li a:visited {
+  color: inherit;
+}
 .nav_Btn ul li:hover {
   color: white;
   cursor: pointer;
@@ -31,6 +36,7 @@ h1 {
   border: 1px solid white;
   border-radius: 4px;
   padding: 0 1%;
+  padding-bottom: 1%;
   margin: 0;
 
   width: 320px;

@@ -28,7 +28,15 @@ body h2{
   list-style: none;
   background-color: #555555;
   color: white;
+
 }
+.Nav_Btn ul li a{
+  text-decoration: none;
+}
+.Nav_Btn  ul li a:visited {
+  color: inherit;
+}
+
 .Nav_Btn ul li:nth-child(3) {
   background-color: #4caf50;
 }
